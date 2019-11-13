@@ -1,5 +1,8 @@
+require_relative 'config/environment'
 require 'active_record'
 include ActiveRecord::Tasks
+require "sinatra/activerecord/rake"
+# require "app/models/student.rb"
 
 DatabaseTasks.db_dir = 'db'
 DatabaseTasks.migrations_paths = ['db/migrate']
